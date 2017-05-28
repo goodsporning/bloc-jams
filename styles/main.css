@@ -60,10 +60,11 @@ body{
   display:table;
   position:absolute;
   top:0;
-  right:25px;
+  right:0px;
   height:100px;
   color:white;
   text-decoration:none;
+  
 }
 .links-container .navbar-link{
   display:table-cell;
@@ -82,6 +83,10 @@ body{
 }
 .links-container .navbar-link:hover{
   color: rgb(233,50,117);
+}
+.links-container .navbar-link:active{
+  color: rgb(233,50,117);
+  background-color: white;
 }
 
 .clearfix::before,
