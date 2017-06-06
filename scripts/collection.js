@@ -5,7 +5,7 @@ var collectionItemTemplate =
   +      '<p>'
   +        '<a class="album-name" href="album.html"> The Colors </a>'
   +        '<br/>'
-  +        '<a href="album.html"> Pable Picasso </a>'
+  +        '<a href="album.html"> Pablo Picasso </a>'
   +        '<br/>'
   +        'X songs'
   +        '<br/>'
@@ -13,3 +13,14 @@ var collectionItemTemplate =
   +    '</div>'
   +  '</div>'
     ;
+
+window.onload = function(){
+
+    var collectionContainer = document.getElementsByClassName('album-covers')[0];
+
+    collectionContainer.innerHTML = ' ';
+
+    for (var i = 0; i<12; i++){
+      collectionContainer.innerHTML += collectionItemTemplate;
+    }
+}

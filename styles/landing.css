@@ -47,7 +47,7 @@ body.landing{
     -webkit-transition-delay:0.2s;
     -moz-transition-delay:0.2s;
     transition-delay: 0.2s;
-    
+    /*sets elements to no be seen..will write code to view*/
 }
 
 .point .point-title {

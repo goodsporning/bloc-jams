@@ -20,6 +20,6 @@ var animatePoints= function(points){
                 cosole.log(revealpoint(i));
 
 
-          
-             });
-           }
+
+             };
+           
