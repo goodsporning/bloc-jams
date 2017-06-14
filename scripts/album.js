@@ -122,13 +122,22 @@ var setCurrentAlbum = function(album) {
          setCurrentAlbum(albumPicasso);
 
          var findParentsByClassName = function(element, targetClass) {
-              if(element){
-                var currentParent = element.parentElement;
-                while (currentParent).className !== targetClass && currentParent.className !== null) {
-                }
-                return currentParent;
-              }
-         };
+              var currentParent = element.parentElement;
+
+     if(currentParrent === null){
+        console.log("No Parent Found");
+
+      }else if(currentParent.className !== targetClass && currentParent.className !== null){
+          currentParent = currentParent.parentElement;
+          console.log(currentParent);
+
+      }else if(currentParent !== element.parentElement){
+
+          console.log("No Parent found with that class name");
+      }
+
+
+    };
          var getSongItem = function(element){
             switch(element.className){
                 case 'album-song-button':
