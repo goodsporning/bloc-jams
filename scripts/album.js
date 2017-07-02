@@ -1,5 +1,12 @@
 
+var setSong = function(songNumber){
+  currentlyPlayingSongNumber = parseInt(songNumber);
+  currentSongFromAlbum = currentAlbum.songs[songNumber - 1];
+};
 
+var getSongNumberCell = function(number){
+  return $('.song-item-number[data-song-number+"'+ number + '"]');
+};
 //function to generate the song row content
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
@@ -17,14 +24,13 @@ var createSongRow = function(songNumber, songName, songLength) {
 
       if (currentlyPlayingSongNumber !== null) {
         // Revert to song number for currently playing song because user started playing new song.
-        var currentlyPlayingCell = $('.song-item-number[data-song-number="' + currentlyPlayingSongNumber + '"]');
+        var currentlyPlayingCell = getSongNumberCell(currentlyPlayingSongNumber);
         currentlyPlayingCell.html(currentlyPlayingSongNumber);
       }
 
       if (currentlyPlayingSongNumber !== songNumber) {
              $(this).html(pauseButtonTemplate);
-             currentlyPlayingSongNumber = songNumber;
-             currentSongFromAlbum = currentAlbum.songs[songNumber - 1];
+             setSong(songNumber);
              updatePlayerBarSong();
 
          } else if (currentlyPlayingSongNumber === songNumber) {
@@ -138,7 +144,7 @@ var previousSong = function(){
    $('.main-controls .play-pause').html(playerBarPauseButton);
 
  };
- 
+
    var songRows = document.getElementsByClassName('album-view-song-item');
    // album button template
    var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
