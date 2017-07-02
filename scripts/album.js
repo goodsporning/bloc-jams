@@ -35,7 +35,6 @@ var createSongRow = function(songNumber, songName, songLength) {
          }
     };
 
-
     var onHover = function(event){
       var songNumberCell = $(this).find('.song-item-number');
       var songNumber = parseInt($(this).attr('data-song-number'));
@@ -139,9 +138,7 @@ var previousSong = function(){
    $('.main-controls .play-pause').html(playerBarPauseButton);
 
  };
-
-
-
+ 
    var songRows = document.getElementsByClassName('album-view-song-item');
    // album button template
    var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
