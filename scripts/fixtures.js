@@ -6,12 +6,12 @@ var albumPicasso = {
      year: '1881',
      albumArtUrl: 'assets/images/album_covers/01.png',
      songs: [
-         { title: 'Blue', duration: '4:26' },
-         { title: 'Green', duration: '3:14' },
-         { title: 'Red', duration: '5:01' },
-         { title: 'Pink', duration: '3:21'},
-         { title: 'Magenta', duration: '2:15'}
-     ]
+       { title: 'Blue', duration: '4:26', audioUrl: 'assets/music/blue' },
+       { title: 'Green', duration: '3:14', audioUrl: 'assets/music/green' },
+       { title: 'Red', duration: '5:01', audioUrl: 'assets/music/red' },
+       { title: 'Pink', duration: '3:21', audioUrl: 'assets/music/pink' },
+       { title: 'Magenta', duration: '2:15', audioUrl: 'assets/music/magenta' }
+     ] 
  };
 
  // another example album
@@ -29,19 +29,3 @@ var albumPicasso = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
-
-// my example album
-var albumSporn = {
-  title: 'The Sporns',
-  artist: 'James Bond',
-  label: 'Dudism',
-  year: '1991',
-  albumArtUrl: 'assets/images/album_covers/01.png',
-  songs: [
-      { title: 'Dude', duration: '4:26' },
-      { title: 'Where', duration: '3:14' },
-      { title: 'is', duration: '5:01' },
-      { title: 'My', duration: '3:21'},
-      { title: 'Car', duration: '2:15'}
-  ]
-};
