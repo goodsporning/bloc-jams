@@ -167,6 +167,17 @@ var previousSong = function(){
     $lastSongNumberCell.html(lastSongNumber);
 };
 
+// var togglePlayfromPlayerBar = function(){
+//   If song is pause and you click --
+//   if(pause){
+//    $togglePlayfromPlayerBar.html(playButtonTemplate);
+// }else{ (playing)
+//    $togglePlayfromPlayerBar.html(pauseButtonTemplate);
+//    var $SongNumberCell = $('.song-item-number[data-song-number="' + currentlyPlayingSongNumber + '"]');
+//}
+// }
+
+
  var updatePlayerBarSong = function(){
    $('.currently-playing .song-name').text(currentSongFromAlbum.title);
    $('.currently-playing .artist-name').text(currentAlbum.artist);
@@ -192,11 +203,13 @@ var previousSong = function(){
 
    var $previousButton = $('.main-controls .previous');
    var $nextButton = $('.main-controls .next');
+   var $playButton =$('.main-controls .play-pause');
 
    $(document).ready(function() {
        setCurrentAlbum(albumPicasso);
        $previousButton.click(previousSong);
        $nextButton.click(nextSong);
+       $playButton.click(togglePlayFromPlayerBar)
    });
 
      var albums = [albumPicasso, albumMarconi];
