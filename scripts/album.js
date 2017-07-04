@@ -224,6 +224,7 @@ var previousSong = function(){
      });
 
      // #1
+     //COMMENT
       //  $albumTitle = $('.album-view-title');
       //  $albumArtist = $('.album-view-artist');
       //  $albumReleaseInfo = $('.album-view-release-info');
